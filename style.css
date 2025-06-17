@@ -1,0 +1,172 @@
+@import "tailwindcss";
+
+/* style.css */
+
+/* Color variables */
+:root {
+  --deep-blue: #0a2342;
+  --white: #ffffff;
+  --gold: #ffb400;
+  --orange: #ff7f11;
+  --text-dark: #1a1a1a;
+}
+
+/* Reset and base styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--deep-blue);
+  color: var(--text-dark);
+  font-family: "Segoe UI", Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Header improvements for classic, rich look */
+header {
+  font-family: "Georgia", "Times New Roman", Times, serif;
+}
+
+header h1 {
+  font-family: "Georgia", "Times New Roman", Times, serif;
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+
+header nav span,
+header nav select,
+header nav button {
+  font-family: "Georgia", "Times New Roman", Times, serif;
+}
+
+header nav select {
+  background: #fff9fa;
+  color: #6b2137;
+  border: none;
+  border-radius: 4px;
+  padding: 0.25rem 0.75rem;
+  font-weight: 500;
+}
+
+header nav button {
+  background: #a8324a;
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(107, 33, 55, 0.08);
+  transition: background 0.2s;
+}
+
+header nav button:hover {
+  background: #6b2137;
+}
+
+header nav span {
+  color: #fff;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+/* Centered container */
+.container {
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(10, 35, 66, 0.08);
+  padding: 2rem 2.5rem;
+  max-width: 420px;
+  width: 90%;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Headings and highlights */
+h1,
+h2,
+h3 {
+  color: var(--deep-blue);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.highlight {
+  color: var(--gold);
+  font-weight: bold;
+}
+
+/* Buttons */
+.button,
+button {
+  background: linear-gradient(90deg, var(--gold), var(--orange));
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.2s;
+}
+
+.button:hover,
+button:hover {
+  background: linear-gradient(90deg, var(--orange), var(--gold));
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(10, 35, 66, 0.1);
+}
+
+/* Use images from /images/ folder in your HTML like: <img src="/images/plane.jpg" alt="Plane"> */
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem;
+    max-width: 98%;
+  }
+  h1,
+  h2,
+  h3 {
+    font-size: 1.2rem;
+  }
+  .button,
+  button {
+    width: 100%;
+    padding: 0.75rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 0.5rem;
+  }
+  header nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  header h1 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+}
